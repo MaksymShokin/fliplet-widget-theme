@@ -682,6 +682,8 @@ header {
     position: relative;
     display: flex;
     align-items: center; }
+  .color-field-holder .alignInheritDot {
+    left: 30px; }
   .color-field-holder .color-picker-background {
     width: 30px !important;
     min-width: 30px;
