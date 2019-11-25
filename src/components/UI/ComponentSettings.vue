@@ -25,7 +25,7 @@
                 </template>
               </div>
             </template>
-            <div class="col-xs-12" :class="{ 'multi-field': variable.fields.length > 1 }">
+            <div class="col-xs-12" :class="{ 'multi-field': variable.fields.length >= 1 }">
               <template v-for="(field, idx) in groupFontStyleFields(variable.fields)">
                 <template v-if="Array.isArray(field)">
                   <div class="field-group">
@@ -407,6 +407,6 @@ export default {
     bus.$off('check-margin-field', this.runMarginFieldLogic)
     bus.$off('group-settings-changed', this.hideApplyReset)
     bus.$off('component-context-changed', this.onContextSwitch)
-  } 
+  }
 }
 </script>
